@@ -3,7 +3,7 @@ package seeds
 import (
 	"time"
 
-	"portfolio/app/domain"
+	"sample/app/domain"
 
 	"github.com/jinzhu/gorm"
 )

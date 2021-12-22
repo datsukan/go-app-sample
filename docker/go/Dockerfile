@@ -5,7 +5,7 @@ WORKDIR /go/src/app/
 COPY ./back .
 
 RUN apk upgrade --update && \
-    apk --no-cache add git
+    apk --no-cache add git gcc musl-dev
 
 RUN go get github.com/gin-gonic/gin \
     github.com/jinzhu/gorm \

@@ -1,7 +1,0 @@
-CREATE TABLE IF NOT EXISTS preferences(
-    id bigint AUTO_INCREMENT NOT NULL primary key,
-    label varchar(50) NOT NULL,
-    class varchar(10000),
-    created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    updated_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-);

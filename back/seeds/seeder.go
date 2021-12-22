@@ -2,8 +2,8 @@ package main
 
 import (
 	"log"
-	"portfolio/app/infrastructure"
-	"portfolio/seeds/seeds"
+	"sample/app/infrastructure"
+	"sample/seeds/seeds"
 
 	"github.com/jinzhu/gorm"
 	_ "github.com/jinzhu/gorm/dialects/mysql"

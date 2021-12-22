@@ -1,7 +1,7 @@
 package main
 
 import (
-	"portfolio/app/infrastructure"
+	"sample/app/infrastructure"
 )
 
 func main() {

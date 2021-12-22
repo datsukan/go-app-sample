@@ -1,7 +1,7 @@
 package usecase
 
 import (
-	"portfolio/app/domain"
+	"sample/app/domain"
 )
 
 type UserInteractor struct {

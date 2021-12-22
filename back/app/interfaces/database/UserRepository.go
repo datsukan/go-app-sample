@@ -5,7 +5,7 @@ import (
 
 	"github.com/jinzhu/gorm"
 
-	"portfolio/app/domain"
+	"sample/app/domain"
 )
 
 type UserRepository struct{}

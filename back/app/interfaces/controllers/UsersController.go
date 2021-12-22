@@ -4,9 +4,9 @@ import (
 	"strconv"
 	"time"
 
-	"portfolio/app/domain"
-	"portfolio/app/interfaces/database"
-	"portfolio/app/usecase"
+	"sample/app/domain"
+	"sample/app/interfaces/database"
+	"sample/app/usecase"
 )
 
 type UsersController struct {

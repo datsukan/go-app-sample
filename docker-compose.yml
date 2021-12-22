@@ -2,7 +2,7 @@ version: '3'
 
 services:
   go:
-    container_name: portfolio-go
+    container_name: sample-go
     platform: linux/x86_64
     hostname: localhost
     ports:
@@ -21,7 +21,7 @@ services:
       - SYS_PTRACE
 
   mariadb:
-    container_name: portfolio-mariadb
+    container_name: sample-mariadb
     image: mariadb:10
     platform: linux/x86_64
     hostname: localhost
@@ -29,14 +29,14 @@ services:
       - 3306:3306
     environment:
       MYSQL_ROOT_PASSWORD: password
-      MYSQL_DATABASE: portfolio
+      MYSQL_DATABASE: sample
     volumes:
-      - portfolio-dbdata:/var/lib/mysql
+      - sample-dbdata:/var/lib/mysql
     networks:
       - common
 
 volumes:
-  portfolio-dbdata:
+  sample-dbdata:
     driver: local
 
 networks:

@@ -3,7 +3,7 @@ package usecase
 import (
 	"github.com/jinzhu/gorm"
 
-	"portfolio/app/domain"
+	"sample/app/domain"
 )
 
 type UserRepository interface {

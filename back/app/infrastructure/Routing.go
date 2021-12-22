@@ -3,7 +3,7 @@ package infrastructure
 import (
 	"github.com/gin-gonic/gin"
 
-	"portfolio/app/interfaces/controllers"
+	"sample/app/interfaces/controllers"
 )
 
 type Routing struct {
