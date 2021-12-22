@@ -1,0 +1,44 @@
+version: '3'
+
+services:
+  go:
+    container_name: portfolio-go
+    platform: linux/x86_64
+    hostname: localhost
+    ports:
+      - 80:80
+      - 2345:2345
+    build:
+      context: .
+      dockerfile: ./docker/go/Dockerfile
+    volumes:
+      - ./back:/go/src/app
+    networks:
+      - common
+    security_opt:
+      - apparmor:unconfined
+    cap_add:
+      - SYS_PTRACE
+
+  mariadb:
+    container_name: portfolio-mariadb
+    image: mariadb:10
+    platform: linux/x86_64
+    hostname: localhost
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: portfolio
+    volumes:
+      - portfolio-dbdata:/var/lib/mysql
+    networks:
+      - common
+
+volumes:
+  portfolio-dbdata:
+    driver: local
+
+networks:
+  common:
+    driver: bridge

@@ -1,0 +1,8 @@
+CREATE TABLE IF NOT EXISTS accounts(
+    id bigint AUTO_INCREMENT NOT NULL primary key,
+    name varchar(20) NOT NULL,
+    image_url varchar(2000) NOT NULL,
+    link_url varchar(2000) NOT NULL,
+    created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    updated_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
